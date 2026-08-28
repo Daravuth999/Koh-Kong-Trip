@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="km" data-lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Koh Kong 3D2N · កោះកុង ៣ថ្ងៃ២យប់ · 30 Aug–1 Sep 2026</title>
+<meta name="description" content="Kampong Cham → Koh Kong → Tatai → Kampong Cham, 3 days / 2 nights, De Zee Hotel, 30 Aug–1 Sep 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canopy:#16321F;
+    --moss:#3F6B4A;
+    --sage:#AEC4A2;
+    --stone:#F1ECE1;
+    --gold:#C08A3E;
+    --charcoal:#221F1A;
+    --white:#FFFFFF;
+    --line: rgba(34,31,26,0.12);
+    --shadow: 0 6px 20px rgba(22,50,31,0.10);
+    --radius: 18px;
+    --font-en-display:'Fraunces', serif;
+    --font-km-display:'Noto Serif Khmer', serif;
+    --font-en-body:'Inter', sans-serif;
+    --font-km-body:'Kantumruy Pro', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background:var(--stone);
+    color:var(--charcoal);
+    font-family:var(--font-en-body), var(--font-km-body), sans-serif;
+    overflow-x:hidden;
+    padding-bottom:calc(70px + env(safe-area-inset-bottom));
+    -webkit-text-size-adjust:100%;
+  }
+  h1,h2,h3{font-family:var(--font-en-display), var(--font-km-display), serif; margin:0; line-height:1.15;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{max-width:100%; display:block;}
+  .km-text{font-family:var(--font-km-display), serif;}
+  p .km-text, span.small .km-text, .en-text ~ .km-text, .label .km-text, .btn .km-text, li .km-text{font-family:var(--font-km-body), sans-serif;}
+
+  /* ---------- bilingual label system ---------- */
+  .label{display:flex; flex-direction:column; gap:2px;}
+  .label .km-text{font-size:1em; font-weight:600;}
+  .label .en-text{font-size:0.78em; opacity:0.68; letter-spacing:0.02em;}
+  html[data-lang="en"] .label{flex-direction:column-reverse;}
+  html[data-lang="en"] .label .en-text{font-size:1em; font-weight:600; opacity:1;}
+  html[data-lang="en"] .label .km-text{font-size:0.8em; opacity:0.62; font-weight:500;}
+
+  /* ---------- layout helpers ---------- */
+  .wrap{max-width:640px; margin:0 auto; padding:0 18px;}
+  section{padding:44px 0; position:relative;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-en-body); font-size:12px; font-weight:700;
+    letter-spacing:0.14em; text-transform:uppercase; color:var(--moss);
+    margin-bottom:10px;
+  }
+  .section-title{font-size:26px; color:var(--canopy); margin-bottom:4px;}
+  .section-title .km-text{display:block; font-size:1.3em;}
+  .section-title .en-text{display:block; font-size:0.5em; font-family:var(--font-en-body); font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--moss); margin-top:4px;}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:40;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 18px; background:rgba(241,236,225,0.92); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand{display:flex; align-items:center; gap:8px; font-family:var(--font-en-display); font-weight:600; font-size:15px; color:var(--canopy);}
+  .brand .dot{width:8px; height:8px; border-radius:50%; background:var(--gold);}
+  .lang-toggle{
+    display:flex; border:1px solid var(--canopy); border-radius:999px; overflow:hidden;
+    font-size:12px; font-weight:700;
+  }
+  .lang-toggle button{
+    appearance:none; border:none; background:transparent; color:var(--canopy);
+    padding:6px 12px; min-height:32px; cursor:pointer; font-family:inherit; font-size:12px; font-weight:700;
+  }
+  .lang-toggle button[aria-pressed="true"]{background:var(--canopy); color:var(--white);}
+  .lang-toggle button:focus-visible{outline:2px solid var(--gold); outline-offset:-2px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--canopy) 0%, #1d4029 62%, var(--moss) 100%);
+    color:var(--white); padding:52px 0 40px; text-align:center; overflow:hidden;
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .hero-canopy{position:absolute; inset:0; opacity:0.35; z-index:1;}
+  .hero-eyebrow-km{font-family:var(--font-km-display); font-size:15px; letter-spacing:0.08em; color:var(--sage); margin-bottom:6px;}
+  .hero h1{font-size:44px; letter-spacing:0.02em; color:var(--white);}
+  .hero .sub{margin-top:14px; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:var(--sage); font-weight:600;}
+  .hero .dates{font-size:13px; letter-spacing:0.1em; color:rgba(255,255,255,0.8); margin-top:4px;}
+  .hero .route-line{
+    margin-top:20px; font-family:var(--font-en-body); font-size:14px; font-weight:500;
+    color:var(--white); background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+    border-radius:999px; padding:10px 16px; display:inline-block;
+  }
+  .hero-actions{display:flex; gap:10px; justify-content:center; margin-top:26px; flex-wrap:wrap;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; justify-content:center;
+    min-height:48px; padding:12px 18px; border-radius:14px; font-weight:700; font-size:14px;
+    text-decoration:none; border:1px solid transparent; cursor:pointer; font-family:var(--font-en-body);
+    transition:transform 0.12s ease, box-shadow 0.12s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  .btn-primary{background:var(--gold); color:var(--canopy);}
+  .btn-primary:active{box-shadow:inset 0 2px 6px rgba(0,0,0,0.18);}
+  .btn-ghost{background:rgba(255,255,255,0.08); color:var(--white); border-color:rgba(255,255,255,0.35);}
+  .btn-outline{background:var(--white); color:var(--canopy); border-color:var(--line);}
+  .btn-outline:active{background:var(--stone);}
+  .btn-solid{background:var(--canopy); color:var(--white);}
+  .btn-solid:active{background:#0f2417;}
+  .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+  .btn small{font-weight:500; opacity:0.85;}
+
+  /* ---------- route overview (signature element) ---------- */
+  .route-overview{background:var(--white);}
+  .river-wrap{position:relative; margin-top:26px;}
+  .river-svg{width:100%; height:auto; overflow:visible;}
+  .river-path{fill:none; stroke:var(--sage); stroke-width:3; stroke-dasharray:2 10; stroke-linecap:round;}
+  .river-node circle{fill:var(--white); stroke:var(--moss); stroke-width:2.5;}
+  .river-node.active circle{fill:var(--gold); stroke:var(--gold);}
+  .river-node text{font-family:'Noto Serif Khmer', serif; font-size:13px; fill:var(--charcoal);}
+  .river-node .en{font-family:'Inter', sans-serif; font-size:9px; fill:var(--moss); font-weight:600;}
+  .travel-dot{
+    fill:var(--gold); stroke:var(--white); stroke-width:2;
+    offset-rotate:0deg;
+    animation:travel 9s linear infinite;
+  }
+  @keyframes travel{ 0%{offset-distance:0%;} 100%{offset-distance:100%;} }
+  @media (prefers-reduced-motion: reduce){ .travel-dot{ animation:none; offset-distance:2%; } }
+  .route-caption{margin-top:14px; font-size:12px; color:var(--moss); text-align:center; font-weight:600; letter-spacing:0.04em;}
+
+  /* ---------- hotel card ---------- */
+  .hotel-card{
+    background:var(--canopy); color:var(--white); border-radius:22px;
+    padding:24px 20px; box-shadow:var(--shadow);
+  }
+  .hotel-card .locked-badge{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.08em;
+    text-transform:uppercase; background:var(--gold); color:var(--canopy);
+    padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  }
+  .hotel-card h3{font-size:24px; color:var(--white);}
+  .hotel-meta-row{display:flex; gap:10px; margin:14px 0; flex-wrap:wrap;}
+  .night-chip{
+    background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25);
+    border-radius:12px; padding:8px 12px; font-size:12px; flex:1; min-width:130px;
+  }
+  .night-chip .d{font-weight:700; display:block; margin-bottom:2px;}
+  .hotel-facts{margin-top:12px; font-size:14px; line-height:1.65; color:rgba(255,255,255,0.92);}
+  .hotel-facts dt{font-weight:700; color:var(--sage); margin-top:10px; font-size:11px; text-transform:uppercase; letter-spacing:0.06em;}
+  .hotel-facts dd{margin:2px 0 0;}
+  .verify-tag{
+    display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:0.04em;
+    color:var(--canopy); background:var(--sage); padding:2px 8px; border-radius:999px; margin-left:6px;
+  }
+
+  /* ---------- day timeline ---------- */
+  .day-block{border-top:1px solid var(--line); padding-top:30px; margin-top:30px;}
+  .day-block:first-of-type{border-top:none; margin-top:0;}
+  .day-head{display:flex; align-items:baseline; gap:10px; margin-bottom:18px;}
+  .day-num{
+    font-family:var(--font-en-display); font-weight:700; font-size:34px; color:var(--sage);
+    -webkit-text-stroke:1.5px var(--moss); color:transparent;
+  }
+  .day-head-text .km-text{display:block; font-size:19px; color:var(--canopy); font-weight:700;}
+  .day-head-text .en-text{display:block; font-size:12px; color:var(--moss); font-weight:600; letter-spacing:0.05em; text-transform:uppercase;}
+
+  .timeline{position:relative; padding-left:26px;}
+  .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  .t-item{position:relative; padding-bottom:22px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:""; position:absolute; left:-26px; top:4px; width:14px; height:14px; border-radius:50%;
+    background:var(--white); border:2.5px solid var(--moss);
+  }
+  .t-item.approx::before{border-color:var(--gold); border-style:dashed;}
+  .t-time{font-weight:700; font-size:13px; color:var(--moss); letter-spacing:0.03em;}
+  .t-time .approx-tag{font-weight:600; color:var(--gold); font-size:11px; margin-left:4px;}
+  .t-card{
+    background:var(--white); border:1px solid var(--line); border-radius:14px;
+    padding:12px 14px; margin-top:6px; box-shadow:0 2px 8px rgba(22,50,31,0.05);
+  }
+  .t-title{font-weight:700; font-size:15px; color:var(--charcoal); margin-bottom:3px;}
+  .t-title .km-text{font-family:var(--font-km-body); font-size:1em;}
+  .t-desc{font-size:13.5px; color:#4a4740; line-height:1.55;}
+  .t-note{font-size:12px; color:var(--gold); font-weight:600; margin-top:6px;}
+  .t-links{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  .mini-link{
+    font-size:12px; font-weight:700; text-decoration:none; color:var(--canopy);
+    background:var(--stone); border:1px solid var(--line); border-radius:999px;
+    padding:7px 12px; display:inline-flex; align-items:center; gap:4px; min-height:32px;
+  }
+  .mini-link:active{background:var(--sage);}
+  .night-marker{
+    background:var(--canopy); color:var(--white); border-radius:12px; padding:10px 14px;
+    font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:8px; margin-top:4px;
+  }
+
+  /* ---------- maps directory ---------- */
+  .maps-directory{background:var(--white);}
+  .map-card{
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+    margin-top:20px; box-shadow:var(--shadow); background:var(--white);
+  }
+  .map-card-head{padding:14px 16px 4px;}
+  .map-card-head .idx{font-size:11px; font-weight:700; color:var(--gold); letter-spacing:0.08em;}
+  .map-embed-wrap{position:relative; width:100%; height:clamp(240px, 58vw, 320px); background:var(--stone);}
+  .map-embed-wrap iframe{width:100%; height:100%; border:0;}
+  .map-fallback-note{font-size:11px; color:#8a8578; padding:6px 16px 0;}
+  .map-card-actions{display:flex; gap:8px; padding:12px 16px 16px; flex-wrap:wrap;}
+  @media (min-width:600px){ .map-embed-wrap{height:380px;} }
+
+  /* ---------- routes list ---------- */
+  .routes-list{background:var(--stone);}
+  .route-item{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    background:var(--white); border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px; margin-top:12px;
+  }
+  .route-item .route-txt{font-size:13.5px; font-weight:600; line-height:1.4;}
+  .route-item .route-txt .via{display:block; font-size:11px; color:var(--moss); font-weight:600; margin-top:2px;}
+
+  /* ---------- budget ---------- */
+  .budget-table{width:100%; border-collapse:collapse; margin-top:18px; font-size:13.5px;}
+  .budget-table th{
+    text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.05em;
+    color:var(--moss); padding:8px 6px; border-bottom:2px solid var(--canopy);
+  }
+  .budget-table td{padding:11px 6px; border-bottom:1px solid var(--line); vertical-align:top;}
+  .budget-table tr:last-child td{border-bottom:2px solid var(--canopy); font-weight:700;}
+  .est-badge{
+    display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:0.05em;
+    background:rgba(192,138,62,0.16); color:var(--gold); padding:2px 7px; border-radius:999px; margin-top:3px;
+  }
+  .budget-note{font-size:12px; color:#6b6659; margin-top:14px; line-height:1.6;}
+
+  /* ---------- safety ---------- */
+  .safety-box{
+    background:#FBF3E6; border:1px solid rgba(192,138,62,0.4); border-radius:18px; padding:20px;
+  }
+  .safety-box h3{color:#8a5f22; font-size:17px;}
+  .safety-box p{margin-top:10px; font-size:14px; line-height:1.7; color:var(--charcoal);}
+  .safety-box .km-p{font-family:var(--font-km-body);}
+
+  /* ---------- packing ---------- */
+  .packing-list{list-style:none; margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .packing-list li{
+    background:var(--white); border:1px solid var(--line); border-radius:12px;
+    padding:10px 12px; font-size:13px; display:flex; align-items:center; gap:8px;
+  }
+  @media (max-width:380px){ .packing-list{grid-template-columns:1fr;} }
+
+  /* ---------- footer ---------- */
+  footer{padding:34px 0 20px; text-align:center;}
+  footer p{font-size:11.5px; color:#8a8578; line-height:1.7;}
+
+  /* ---------- bottom nav ---------- */
+  .bottom-nav{
+    position:fixed; left:0; right:0; bottom:0; z-index:50;
+    display:flex; justify-content:space-around; align-items:center;
+    background:rgba(255,255,255,0.96); backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom));
+  }
+  .bottom-nav a{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    text-decoration:none; color:#7c7869; font-size:10.5px; font-weight:700;
+    min-width:56px; min-height:44px; justify-content:center; border-radius:12px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .bottom-nav a .ic{font-size:19px;}
+  .bottom-nav a.active{color:var(--canopy); background:var(--stone);}
+  .bottom-nav a:focus-visible{outline:2px solid var(--gold); outline-offset:-2px;}
+
+  .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+
+  ::selection{background:var(--gold); color:var(--white);}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><span class="dot"></span> KOH KONG · 3D2N</div>
+  <div class="lang-toggle" role="group" aria-label="Language / ភាសា">
+    <button type="button" id="btn-lang-km" aria-pressed="true">ខ្មែរ</button>
+    <button type="button" id="btn-lang-en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <svg class="hero-canopy" viewBox="0 0 400 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,220 L0,140 Q40,110 80,140 T160,140 T240,140 T320,140 T400,140 L400,220 Z" fill="rgba(255,255,255,0.06)"/>
+    <path d="M0,220 L0,175 Q50,150 100,175 T200,175 T300,175 T400,175 L400,220 Z" fill="rgba(255,255,255,0.09)"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-eyebrow-km">កោះកុង</div>
+    <h1>KOH KONG</h1>
+    <p class="sub">3 Days · 2 Nights</p>
+    <p class="dates">30 AUG — 1 SEP 2026</p>
+    <p class="route-line">Kampong Cham → Koh Kong → Tatai → Kampong Cham</p>
+    <div class="hero-actions">
+      <a href="#agenda" class="btn btn-primary">🧭 <span class="label"><span class="km-text">ចាប់ផ្តើមដំណើរ</span><span class="en-text">Start Journey</span></span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=Kampong+Cham,+Cambodia&destination=Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener" class="btn btn-ghost">📍 <span class="label"><span class="km-text">បើកផ្លូវ</span><span class="en-text">Open Route</span></span></a>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- ================= SCHEMATIC ROUTE ================= -->
+<section id="route-overview" class="route-overview">
+  <div class="wrap">
+    <div class="eyebrow">🗺️ <span class="label"><span class="km-text">ផែនទីទូទៅ</span><span class="en-text">Trip Route Overview · Schematic</span></span></div>
+    <h2 class="section-title"><span class="km-text">ផ្លូវធ្វើដំណើរ</span><span class="en-text">The Journey, Top to Bottom</span></h2>
+    <div class="river-wrap">
+      <svg class="river-svg" viewBox="0 0 300 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic route: Kampong Cham to Koh Kong to Peam Krasaop to Tatai to Tatai Waterfall and back">
+        <path id="riverPath" class="river-path" d="M150,20 C90,70 210,110 150,160 C90,210 210,250 150,300 C90,350 210,390 150,440 C90,490 210,530 150,580 C120,600 150,610 150,610"/>
+        <!-- nodes -->
+        <g class="river-node"><circle cx="150" cy="20" r="9"/><text x="168" y="17">កំពង់ចាម</text><text class="en" x="168" y="30">Kampong Cham</text></g>
+        <g class="river-node active"><circle cx="150" cy="160" r="9"/><text x="168" y="157">កោះកុង</text><text class="en" x="168" y="170">Koh Kong · De Zee Hotel</text></g>
+        <g class="river-node"><circle cx="150" cy="300" r="9"/><text x="168" y="297">ពាមក្រសោប</text><text class="en" x="168" y="310">Peam Krasaop</text></g>
+        <g class="river-node"><circle cx="150" cy="440" r="9"/><text x="168" y="437">តាតៃ</text><text class="en" x="168" y="450">Tatai River</text></g>
+        <g class="river-node"><circle cx="150" cy="580" r="9"/><text x="168" y="577">ទឹកជ្រោះតាតៃ</text><text class="en" x="168" y="590">Tatai Waterfall</text></g>
+        <circle class="travel-dot" r="6" style="offset-path:path('M150,20 C90,70 210,110 150,160 C90,210 210,250 150,300 C90,350 210,390 150,440 C90,490 210,530 150,580 C120,600 150,610 150,610');"/>
+      </svg>
+    </div>
+    <p class="route-caption">Schematic only · actual navigation always via Google Maps below</p>
+  </div>
+</section>
+
+<!-- ================= HOTEL CARD ================= -->
+<section id="hotel">
+  <div class="wrap">
+    <div class="hotel-card">
+      <span class="locked-badge">🔒 Locked · Both Nights</span>
+      <h3>🏨 DE ZEE HOTEL</h3>
+      <p style="margin-top:6px; font-size:13px; color:var(--sage);">Phum 3, Khemara Phoumin, Koh Kong Province, Cambodia</p>
+      <div class="hotel-meta-row">
+        <div class="night-chip"><span class="d">30 Aug · Night 1</span> De Zee Hotel</div>
+        <div class="night-chip"><span class="d">31 Aug · Night 2</span> De Zee Hotel</div>
+      </div>
+      <dl class="hotel-facts">
+        <dt>Why this hotel</dt>
+        <dd>Selected as the single base for the whole trip — no hotel switching, no Tatai overnight. Day 2 in Tatai is a return day trip.</dd>
+        <dt>Reviews &amp; price <span class="verify-tag">Verify before booking</span></dt>
+        <dd>De Zee Hotel is newly listed on major booking platforms with no public rating or review count yet, and no confirmed live nightly rate was found. Call or message ahead to confirm price and availability.</dd>
+        <dt>Evening convenience</dt>
+        <dd>Koh Kong's riverside strip, restaurants and cafés are a short ride from most guesthouses in Khemara Phoumin, not a flat walk — treat the evening area as "short ride," not "walking distance," unless you've confirmed otherwise on arrival.</dd>
+      </dl>
+      <div class="btn-row">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=11.605235,102.986981" target="_blank" rel="noopener">📍 <span class="label"><span class="km-text">បើកក្នុង Google Maps</span><span class="en-text">Open Google Maps</span></span></a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 <span class="label"><span class="km-text">ទៅសណ្ឋាគារ</span><span class="en-text">Navigate Here</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AGENDA ================= -->
+<section id="agenda">
+  <div class="wrap">
+    <div class="eyebrow">📅 <span class="label"><span class="km-text">កាលវិភាគដំណើរ</span><span class="en-text">Travel Schedule</span></span></div>
+
+    <!-- DAY 1 -->
+    <div class="day-block">
+      <div class="day-head">
+        <span class="day-num">01</span>
+        <span class="day-head-text"><span class="km-text">ថ្ងៃអាទិត្យ · ៣០ សីហា</span><span class="en-text">Sunday · 30 August 2026</span></span>
+      </div>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-time">04:00</div>
+          <div class="t-card">
+            <div class="t-title">🚗 <span class="km-text">ចេញពីកំពង់ចាម</span> · Depart Kampong Cham</div>
+            <div class="t-desc">Begin the journey.</div>
+            <div class="t-links">
+              <a class="mini-link" href="#map-kampongcham">📍 VIEW MAP</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=Kampong+Cham,+Cambodia&destination=Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item approx">
+          <div class="t-time">Morning <span class="approx-tag">approx.</span></div>
+          <div class="t-card">
+            <div class="t-title">☕ <span class="km-text">អាហារពេលព្រឹក</span> · Breakfast stop</div>
+            <div class="t-desc">Fuel / coffee / rest stop along the route.</div>
+            <div class="t-note">No specific restaurant named — pick what's open along the way.</div>
+          </div>
+        </div>
+        <div class="t-item approx">
+          <div class="t-time">11:30–12:30 <span class="approx-tag">approx.</span></div>
+          <div class="t-card">
+            <div class="t-title">🍜 <span class="km-text">អាហារថ្ងៃត្រង់</span> · Lunch</div>
+            <div class="t-desc">Along the journey — timing is approximate.</div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">~14:00</div>
+          <div class="t-card">
+            <div class="t-title">🏨 Arrive Koh Kong · Check in De Zee Hotel</div>
+            <div class="t-desc">Drop luggage, short rest.</div>
+            <div class="t-links">
+              <a class="mini-link" href="#hotel">🏨 HOTEL</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=Koh+Kong+City,+Cambodia&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">15:00–17:30</div>
+          <div class="t-card">
+            <div class="t-title">🌿 <span class="km-text">ពាមក្រសោប</span> · Peam Krasaop Wildlife Sanctuary</div>
+            <div class="t-desc">Main Day 1 attraction — mangrove walk, waterways, a local boat experience, photography.</div>
+            <div class="t-note">Boat availability: subject to local availability.</div>
+            <div class="t-links">
+              <a class="mini-link" href="#map-peamkrasaop">📍 VIEW MAP</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Peam+Krasaop+Wildlife+Sanctuary,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">17:30–18:30</div>
+          <div class="t-card">
+            <div class="t-title">🌅 Sunset / Koh Kong Riverside</div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">19:00</div>
+          <div class="t-card">
+            <div class="t-title">🍤 <span class="km-text">អាហារពេលល្ងាច</span> · Dinner</div>
+            <div class="t-desc">Prefer practical evening options near the hotel.</div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">20:30+</div>
+          <div class="t-card"><div class="t-title">😴 <span class="km-text">សម្រាក</span> · Rest</div></div>
+        </div>
+        <div class="t-item">
+          <span class="night-marker">🌙 NIGHT 1 · De Zee Hotel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-block">
+      <div class="day-head">
+        <span class="day-num">02</span>
+        <span class="day-head-text"><span class="km-text">ថ្ងៃច័ន្ទ · ៣១ សីហា · ថ្ងៃសំខាន់</span><span class="en-text">Monday · 31 August 2026 · Highlight Day</span></span>
+      </div>
+      <p style="font-size:12.5px; color:var(--moss); font-weight:600; margin:-8px 0 16px;">Day trip only — no hotel change, return to De Zee Hotel tonight.</p>
+      <div class="timeline">
+        <div class="t-item"><div class="t-time">06:00</div><div class="t-card"><div class="t-title">☀️ Wake up</div></div></div>
+        <div class="t-item"><div class="t-time">06:30</div><div class="t-card"><div class="t-title">🍳 <span class="km-text">អាហារពេលព្រឹក</span> · Breakfast</div></div></div>
+        <div class="t-item">
+          <div class="t-time">07:15</div>
+          <div class="t-card">
+            <div class="t-title">🚗 Koh Kong → Tatai</div>
+            <div class="t-desc">Real Google Maps driving route.</div>
+            <div class="t-links">
+              <a class="mini-link" href="#map-tatai">📍 VIEW MAP</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Tatai,+Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">08:00–10:30</div>
+          <div class="t-card">
+            <div class="t-title">🛶 <span class="km-text">តាតៃ</span> · Tatai River</div>
+            <div class="t-desc">Boat, kayak, river exploration, Cardamom rainforest scenery, photography.</div>
+            <div class="t-note">Local operator availability not guaranteed.</div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">11:00–12:30</div>
+          <div class="t-card">
+            <div class="t-title">💦 <span class="km-text">ទឹកជ្រោះតាតៃ</span> · Tatai Waterfall</div>
+            <div class="t-desc">Primary nature attraction.</div>
+            <div class="t-note">🌧️ Rainy-season note: currents can strengthen quickly after rain — see safety section below.</div>
+            <div class="t-links">
+              <a class="mini-link" href="#map-tataiwaterfall">📍 VIEW MAP</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=Tatai,+Koh+Kong,+Cambodia&destination=Tatai+Waterfall,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item approx"><div class="t-time">12:30 <span class="approx-tag">approx.</span></div><div class="t-card"><div class="t-title">🍜 Lunch</div></div></div>
+        <div class="t-item"><div class="t-time">13:30–15:00</div><div class="t-card"><div class="t-title">🌳 Relax / explore Tatai</div><div class="t-desc">Kept light — not overpacked.</div></div></div>
+        <div class="t-item">
+          <div class="t-time">15:00+</div>
+          <div class="t-card">
+            <div class="t-title">🚗 Return to Koh Kong · De Zee Hotel</div>
+            <div class="t-links">
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=Tatai+Waterfall,+Cambodia&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item"><div class="t-time">19:00</div><div class="t-card"><div class="t-title">🍽️ <span class="km-text">អាហារពេលល្ងាច</span> · Dinner</div><div class="t-desc">Restaurants, cafés, riverside, evening food, local atmosphere back near the hotel.</div></div></div>
+        <div class="t-item"><div class="t-time">20:30+</div><div class="t-card"><div class="t-title">🌙 Relax</div></div></div>
+        <div class="t-item"><span class="night-marker">🌙 NIGHT 2 · De Zee Hotel</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-block">
+      <div class="day-head">
+        <span class="day-num">03</span>
+        <span class="day-head-text"><span class="km-text">ថ្ងៃអង្គារ · ១ កញ្ញា</span><span class="en-text">Tuesday · 1 September 2026</span></span>
+      </div>
+      <div class="timeline">
+        <div class="t-item"><div class="t-time">06:00</div><div class="t-card"><div class="t-title">🌅 Sunrise / relaxed morning</div><div class="t-desc">Optional: coffee, photography, short walk.</div></div></div>
+        <div class="t-item"><div class="t-time">07:30</div><div class="t-card"><div class="t-title">🍳 <span class="km-text">អាហារពេលព្រឹក</span> · Breakfast</div></div></div>
+        <div class="t-item"><div class="t-time">08:30–10:00</div><div class="t-card"><div class="t-title">🌿 Final Koh Kong morning</div><div class="t-desc">Kept relaxed — no remote attraction that could delay departure.</div></div></div>
+        <div class="t-item">
+          <div class="t-time">10:00</div>
+          <div class="t-card">
+            <div class="t-title">🏨 Check out — De Zee Hotel</div>
+            <div class="t-links"><a class="mini-link" href="#hotel">🏨 HOTEL</a></div>
+          </div>
+        </div>
+        <div class="t-item approx"><div class="t-time">11:30 <span class="approx-tag">approx.</span></div><div class="t-card"><div class="t-title">🍜 Lunch / fuel / supplies</div></div></div>
+        <div class="t-item">
+          <div class="t-time">12:30</div>
+          <div class="t-card">
+            <div class="t-title">🚗 Koh Kong → Kampong Cham</div>
+            <div class="t-links">
+              <a class="mini-link" href="#map-kampongcham">📍 VIEW MAP</a>
+              <a class="mini-link" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Kampong+Cham,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 NAVIGATE</a>
+            </div>
+          </div>
+        </div>
+        <div class="t-item approx">
+          <div class="t-time">Evening <span class="approx-tag">estimated</span></div>
+          <div class="t-card"><div class="t-title">🏠 Return to Kampong Cham</div><div class="t-desc">Estimated evening arrival — no exact arrival time promised.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAPS DIRECTORY ================= -->
+<section id="maps" class="maps-directory">
+  <div class="wrap">
+    <div class="eyebrow">📍 <span class="label"><span class="km-text">គោលដៅលើផែនទី</span><span class="en-text">Google Map Destinations</span></span></div>
+    <h2 class="section-title"><span class="km-text">ផែនទី</span><span class="en-text">Map</span></h2>
+
+    <article class="map-card" id="map-kampongcham">
+      <div class="map-card-head"><span class="idx">01 · DEPARTURE</span><h3 style="font-size:17px;margin-top:4px;"><span class="km-text">កំពង់ចាម</span> · Kampong Cham</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=Kampong+Cham,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Kampong Cham, Cambodia"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Kampong+Cham,+Cambodia" target="_blank" rel="noopener">📍 <span class="label"><span class="km-text">បើកក្នុង Google Maps</span><span class="en-text">Open Google Maps</span></span></a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Kampong+Cham,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 <span class="label"><span class="km-text">ទៅទីនេះ</span><span class="en-text">Navigate Here</span></span></a>
+      </div>
+    </article>
+
+    <article class="map-card" id="map-kohkong">
+      <div class="map-card-head"><span class="idx">02 · CITY</span><h3 style="font-size:17px;margin-top:4px;"><span class="km-text">កោះកុង</span> · Koh Kong City</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=Koh+Kong+City,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Koh Kong City, Cambodia"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Koh+Kong+City,+Cambodia" target="_blank" rel="noopener">📍 Open Google Maps</a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Koh+Kong+City,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Navigate Here</a>
+      </div>
+    </article>
+
+    <article class="map-card" id="map-dezee">
+      <div class="map-card-head"><span class="idx">03 · HOTEL · BOTH NIGHTS</span><h3 style="font-size:17px;margin-top:4px;">🏨 De Zee Hotel</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=De+Zee+Hotel,+Koh+Kong,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of De Zee Hotel, Koh Kong"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below. Location verified: Phum 3, Khemara Phoumin, Koh Kong Province.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=11.605235,102.986981" target="_blank" rel="noopener">📍 Open Google Maps</a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 Navigate Here</a>
+      </div>
+    </article>
+
+    <article class="map-card" id="map-peamkrasaop">
+      <div class="map-card-head"><span class="idx">04 · DAY 1</span><h3 style="font-size:17px;margin-top:4px;"><span class="km-text">ពាមក្រសោប</span> · Peam Krasaop Wildlife Sanctuary</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=Peam+Krasaop+Wildlife+Sanctuary,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Peam Krasaop Wildlife Sanctuary"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Peam+Krasaop+Wildlife+Sanctuary,+Cambodia" target="_blank" rel="noopener">📍 Open Google Maps</a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Peam+Krasaop+Wildlife+Sanctuary,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Navigate Here</a>
+      </div>
+    </article>
+
+    <article class="map-card" id="map-tatai">
+      <div class="map-card-head"><span class="idx">05 · DAY 2</span><h3 style="font-size:17px;margin-top:4px;"><span class="km-text">តាតៃ</span> · Tatai</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=Tatai,+Koh+Kong,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Tatai, Koh Kong"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Tatai,+Koh+Kong,+Cambodia" target="_blank" rel="noopener">📍 Open Google Maps</a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Tatai,+Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Navigate Here</a>
+      </div>
+    </article>
+
+    <article class="map-card" id="map-tataiwaterfall">
+      <div class="map-card-head"><span class="idx">06 · DAY 2</span><h3 style="font-size:17px;margin-top:4px;"><span class="km-text">ទឹកជ្រោះតាតៃ</span> · Tatai Waterfall</h3></div>
+      <div class="map-embed-wrap"><iframe src="https://www.google.com/maps?q=Tatai+Waterfall,+Cambodia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Tatai Waterfall"></iframe></div>
+      <p class="map-fallback-note">🗺️ Map preview unavailable? Use the button below.</p>
+      <div class="map-card-actions">
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Tatai+Waterfall,+Cambodia" target="_blank" rel="noopener">📍 Open Google Maps</a>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Tatai+Waterfall,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Navigate Here</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= ROUTES ================= -->
+<section id="route" class="routes-list">
+  <div class="wrap">
+    <div class="eyebrow">🧭 <span class="label"><span class="km-text">ផ្លូវធ្វើដំណើរ</span><span class="en-text">Driving Routes</span></span></div>
+    <h2 class="section-title"><span class="en-text">Route</span></h2>
+
+    <div class="route-item">
+      <div class="route-txt">Route 1<span class="via">Kampong Cham → Koh Kong</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=Kampong+Cham,+Cambodia&destination=Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 2<span class="via">Koh Kong → De Zee Hotel</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=Koh+Kong+City,+Cambodia&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 3<span class="via">De Zee Hotel → Peam Krasaop</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Peam+Krasaop+Wildlife+Sanctuary,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 4<span class="via">De Zee Hotel → Tatai</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Tatai,+Koh+Kong,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 5<span class="via">Tatai → Tatai Waterfall</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=Tatai,+Koh+Kong,+Cambodia&destination=Tatai+Waterfall,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 6<span class="via">Tatai Waterfall → De Zee Hotel</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=Tatai+Waterfall,+Cambodia&destination=11.605235,102.986981&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+    <div class="route-item">
+      <div class="route-txt">Route 7<span class="via">De Zee Hotel → Kampong Cham</span></div>
+      <a class="btn btn-solid" style="padding:10px 14px;" href="https://www.google.com/maps/dir/?api=1&origin=11.605235,102.986981&destination=Kampong+Cham,+Cambodia&travelmode=driving" target="_blank" rel="noopener">🧭 Go</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUDGET ================= -->
+<section id="budget">
+  <div class="wrap">
+    <div class="eyebrow">💰 Budget</div>
+    <h2 class="section-title"><span class="en-text">Practical Budget · 2 People</span></h2>
+    <table class="budget-table">
+      <thead><tr><th>Category</th><th>Estimate (2 people)</th></tr></thead>
+      <tbody>
+        <tr><td>Fuel <span class="est-badge">Estimated</span></td><td>$45–65 round trip</td></tr>
+        <tr><td>Hotel × 2 nights (De Zee) <span class="est-badge">Estimated</span></td><td>$30–50 total</td></tr>
+        <tr><td>Food (6 meals) <span class="est-badge">Estimated</span></td><td>$60–90 total</td></tr>
+        <tr><td>Boat / kayak <span class="est-badge">Estimated</span></td><td>$20–40 total</td></tr>
+        <tr><td>Entrance / local fees <span class="est-badge">Estimated</span></td><td>$5–15 total</td></tr>
+        <tr><td>Miscellaneous <span class="est-badge">Estimated</span></td><td>$20–30 total</td></tr>
+        <tr><td>Total</td><td>≈ $180–290</td></tr>
+      </tbody>
+    </table>
+    <p class="budget-note">Every figure above is an estimate, not a verified price — no hotel rate, boat fee, or entrance fee could be independently confirmed for the current dates. Recalculate against real quotes before departure; nothing here is invented as fact.</p>
+  </div>
+</section>
+
+<!-- ================= SAFETY ================= -->
+<section id="safety">
+  <div class="wrap">
+    <div class="safety-box">
+      <h3>🌧️ <span class="km-text">រដូវវស្សា</span> · Rainy Season · <span class="km-text">សុវត្ថិភាពជាមុន</span> Safety First</h3>
+      <p class="km-p">ចុងខែសីហា ជារដូវវស្សា។ សូមពិនិត្យអាកាសធាតុ និងស្ថានភាពផ្លូវមុនចេញដំណើរ។ ទឹកជ្រោះ និងទន្លេអាចមានចរន្តខ្លាំងបន្ទាប់ពីភ្លៀង។</p>
+      <p>Late August is rainy season. Check weather and road conditions before departure. River currents and waterfall conditions can change quickly after rain. Avoid swimming in fast or rising water.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PACKING ================= -->
+<section id="packing">
+  <div class="wrap">
+    <div class="eyebrow">🎒 Packing List</div>
+    <h2 class="section-title"><span class="en-text">Pack Light, Pack Right</span></h2>
+    <ul class="packing-list">
+      <li>🧥 Rain jacket / poncho</li>
+      <li>📱 Waterproof phone protection</li>
+      <li>🔋 Power bank</li>
+      <li>👟 Comfortable shoes</li>
+      <li>👕 Dry change of clothes</li>
+      <li>🦟 Insect repellent</li>
+      <li>💧 Drinking water</li>
+      <li>🩹 Basic first-aid supplies</li>
+      <li>💵 Cash</li>
+      <li>🪪 Driving documents</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>koh-kong-3d2n-2026.html · Built for GitHub Pages · De Zee Hotel is locked for both nights.<br>
+    Prices, ratings, and review counts are estimated or unverified unless stated otherwise — always confirm before booking.<br>
+    Route diagram is schematic; use the map buttons above for real navigation.</p>
+  </div>
+</footer>
+
+<!-- ================= BOTTOM NAV ================= -->
+<nav class="bottom-nav" aria-label="Quick navigation / ការរុករករហ័ស">
+  <a href="#home" data-section="home" class="active"><span class="ic">🏠</span><span class="label"><span class="km-text" style="font-size:1em;">ទំព័រដើម</span><span class="en-text" style="font-size:0.85em;">Home</span></span></a>
+  <a href="#agenda" data-section="agenda"><span class="ic">📅</span><span class="label"><span class="km-text" style="font-size:1em;">កាលវិភាគ</span><span class="en-text" style="font-size:0.85em;">Agenda</span></span></a>
+  <a href="#maps" data-section="maps"><span class="ic">🗺️</span><span class="label"><span class="km-text" style="font-size:1em;">ផែនទី</span><span class="en-text" style="font-size:0.85em;">Maps</span></span></a>
+  <a href="#route" data-section="route"><span class="ic">🧭</span><span class="label"><span class="km-text" style="font-size:1em;">ផ្លូវ</span><span class="en-text" style="font-size:0.85em;">Route</span></span></a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- language toggle ----
+  var html = document.documentElement;
+  var btnKm = document.getElementById('btn-lang-km');
+  var btnEn = document.getElementById('btn-lang-en');
+  function setLang(lang){
+    html.setAttribute('data-lang', lang);
+    btnKm.setAttribute('aria-pressed', String(lang === 'km'));
+    btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+  }
+  btnKm.addEventListener('click', function(){ setLang('km'); });
+  btnEn.addEventListener('click', function(){ setLang('en'); });
+
+  // ---- bottom nav active state on scroll ----
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.bottom-nav a'));
+  var sections = navLinks.map(function(a){ return document.getElementById(a.getAttribute('data-section')); }).filter(Boolean);
+
+  function updateActive(){
+    var pos = window.scrollY + window.innerHeight * 0.3;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++){
+      if (sections[i].offsetTop <= pos) current = sections[i];
+    }
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-section') === current.id);
+    });
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  // ---- reduced motion: keep travel dot static, no JS needed beyond CSS media query ----
+})();
+</script>
+
+</body>
+</html>
